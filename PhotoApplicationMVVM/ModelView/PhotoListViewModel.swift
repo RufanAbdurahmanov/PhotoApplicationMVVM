@@ -12,14 +12,28 @@ import Foundation
 struct PhotoListViewModel {
     
     
-    let PhotoList : [PhotoData]
+    let PhotoList : [PhotoData]!
     
     
     
+    func numberOfItemsInSection () -> Int {
+        return 50
+    }
     
     
     
-    
+    func photosInSection (albumID: Int) -> [PhotoData] {
+        
+        var photos = [PhotoData]()
+        
+        for album in PhotoList {
+            if album.albumId == albumID {
+                photos.append(album)
+            }
+        }
+        
+        return photos
+    }
     
     
     
@@ -42,6 +56,9 @@ struct PhotoViewModel {
     }
     var id : Int {
         return self.photoViewModel.id
+    }
+    var title : String {
+        return self.photoViewModel.title
     }
     var url : String {
         return self.photoViewModel.url

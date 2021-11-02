@@ -9,7 +9,6 @@ import Foundation
 
 
 
-
 struct AlbumListViewModel {
     
     let AlbumList : [AlbumData]
@@ -36,7 +35,7 @@ struct AlbumListViewModel {
         
         var albumArray = [AlbumData]()
         
-        for  album in albums {
+        for album in albums {
             if album.userId == chosenId {
                 albumArray.append(album)
             }
@@ -44,7 +43,6 @@ struct AlbumListViewModel {
          
         return albumArray
     }
-       
     
     
 }

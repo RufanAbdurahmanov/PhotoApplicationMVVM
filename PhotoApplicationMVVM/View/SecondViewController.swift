@@ -11,6 +11,8 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var SecondTableView: UITableView!
     
+    var tappedAlbumID : Int!
+    
     var tappedUserId : Int!
     
     private var albumListViewModel : AlbumListViewModel!
@@ -65,13 +67,24 @@ extension SecondViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        //print ( self.albomListViewModel.cellData(id: tappedUserId)[indexPath.row])
-        
         cell.textLabel?.text = self.albumListViewModel.cellData(chosenId: tappedUserId)[indexPath.row].title
         
         return cell
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tappedAlbumID = ((tappedUserId - 1) * 10) + self.albumListViewModel.AlbumList[indexPath.row].id
+        //print(tappedAlbumID)
+        self.performSegue(withIdentifier: "toThirdViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toThirdViewController" {
+            let destinationVC = segue.destination as! ThirdViewController
+            destinationVC.selectedAlbumID = tappedAlbumID
+        }
+    }
     
 }

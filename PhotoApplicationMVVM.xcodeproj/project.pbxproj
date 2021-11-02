@@ -17,6 +17,7 @@
 		110F101E27200B4900425A71 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F101D27200B4900425A71 /* UserListViewModel.swift */; };
 		110F102127200EEE00425A71 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F102027200EEE00425A71 /* WebService.swift */; };
 		110F10292720C21300425A71 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F10282720C21300425A71 /* CustomCell.swift */; };
+		114E9ECE272DE9EF00EB0A67 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E9ECD272DE9EF00EB0A67 /* PhotoCollectionViewCell.swift */; };
 		1161346027243BBE00ACE8C9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161345F27243BBE00ACE8C9 /* ThirdViewController.swift */; };
 		116C73CE27221D8D00D60BA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116C73CD27221D8D00D60BA7 /* SecondViewController.swift */; };
 		116C73D2272220BE00D60BA7 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116C73D1272220BE00D60BA7 /* AlbumsModel.swift */; };
@@ -38,6 +39,7 @@
 		110F101D27200B4900425A71 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		110F102027200EEE00425A71 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		110F10282720C21300425A71 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		114E9ECD272DE9EF00EB0A67 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		1161345F27243BBE00ACE8C9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		116C73CD27221D8D00D60BA7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		116C73D1272220BE00D60BA7 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
@@ -114,9 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				110F1008272005B600425A71 /* ViewController.swift */,
-				116C73CD27221D8D00D60BA7 /* SecondViewController.swift */,
 				110F10282720C21300425A71 /* CustomCell.swift */,
+				116C73CD27221D8D00D60BA7 /* SecondViewController.swift */,
 				1161345F27243BBE00ACE8C9 /* ThirdViewController.swift */,
+				114E9ECD272DE9EF00EB0A67 /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				116C73D42722214000D60BA7 /* AlbumListViewModel.swift in Sources */,
 				110F1007272005B600425A71 /* SceneDelegate.swift in Sources */,
 				110F10292720C21300425A71 /* CustomCell.swift in Sources */,
+				114E9ECE272DE9EF00EB0A67 /* PhotoCollectionViewCell.swift in Sources */,
 				110F101E27200B4900425A71 /* UserListViewModel.swift in Sources */,
 				1161346027243BBE00ACE8C9 /* ThirdViewController.swift in Sources */,
 			);

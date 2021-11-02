@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.backgroundColor = .clear
         
         
+        
         getData()
         
     }
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomCell
         
-        cell.usernameLabel.text = "@\(self.userListViewModel.userAtIndex(indexPath.row).userName)"
+        cell.usernameLabel.text = self.userListViewModel.userAtIndex(indexPath.row).userName
         cell.nameLabel.text = self.userListViewModel.userAtIndex(indexPath.row).name
         cell.backgroundColor = .clear
         return cell

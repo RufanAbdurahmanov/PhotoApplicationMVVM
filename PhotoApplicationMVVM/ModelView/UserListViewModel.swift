@@ -10,7 +10,7 @@ import Foundation
 
 struct UserListViewModel {
     
-    let UserList : [UserData]
+    let UserList : [UserData]!
     
     
     func numberOfRowsInSection () -> Int {

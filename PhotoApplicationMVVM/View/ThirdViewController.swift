@@ -9,12 +9,30 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var selectedAlbumID: Int!
+    
     private var photoListViewModel : PhotoListViewModel!
+    
 
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        navigationItem.title = "Photos"
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
+        
+        //print(selectedAlbumID)
+        
+        //let x: Int =  self.photoListViewModel.photosInSection(albumID: selectedAlbumID).count
+        //print ( x )
 
-        //getData()
+        self.getData()
     }
     
 
@@ -22,21 +40,41 @@ class ThirdViewController: UIViewController {
         
         let url = URL(string: "​https://jsonplaceholder.typicode.com/photos/")!
         
-        WebService().downloadPhotoAPI(url: url) { photos in
+        WebService().downloadPhotoAPI(url: url) { photoList in
             
-            if let photos = photos {
-                self.photoListViewModel = PhotoListViewModel.init(PhotoList: photos)
+            if let photoList = photoList {
+                self.photoListViewModel = PhotoListViewModel.init(PhotoList: photoList)
             }
             
             DispatchQueue.main.async {
-                //tableView.reloadData()
-                
+
+                self.collectionView.reloadData()
             }
-            
         }
         
     }
     
+ 
     
 
+}
+
+
+extension ThirdViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath)
+        cell.backgroundColor = .gray
+        return cell
+    }
+    
+    
+       
+    
+    
 }

@@ -35,7 +35,7 @@ class WebService {
     }
     
     
-    func downloadAlbumAPI (url : URL, completion: @escaping ([AlbumData]?) -> ()     ) {
+    func downloadAlbumAPI (url : URL, completion: @escaping ([AlbumData]?) -> ()  ) {
         
         URLSession.shared.dataTask(with: url) { data , response , error  in
             
@@ -59,7 +59,7 @@ class WebService {
     
     
     
-    func downloadPhotoAPI (url: URL, completion: @escaping ([PhotoData]?) -> () ) {
+    func downloadPhotoAPI (url: URL, completion: @escaping ([PhotoData]?) -> ()  ) {
         
         URLSession.shared.dataTask(with: url) { data , response , error in
             
@@ -73,6 +73,7 @@ class WebService {
                 
                 if let photoList = photoList {
                     completion(photoList)
+                    print(photoList)
                 }
                 
             }
