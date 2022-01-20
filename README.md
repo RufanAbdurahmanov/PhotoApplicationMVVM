@@ -1,2 +1,2 @@
 # PhotoApplicationMVVM
-<h1>Mobile Dev home assignment</h1>
+<h4>Mobile Dev home assignment</h4>
